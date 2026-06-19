@@ -5,19 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สถานที่ท่องเที่ยวในประเทศไทย</title>
     <style>
-        /* การตั้งค่าพื้นฐาน */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Sarabun', Tahoma, sans-serif; /* ใช้ฟอนต์ที่อ่านง่าย */
+            font-family: 'Sarabun', Tahoma, sans-serif;
             background-color: #f4f7f6;
             color: #333;
         }
-
-        /* ส่วนหัวของเว็บไซต์ */
         header {
             background-color: #0056b3;
             color: white;
@@ -25,16 +18,8 @@
             padding: 3rem 1rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* ส่วนพื้นที่แสดงรูปภาพ (Grid Layout) */
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
         .gallery-container {
             max-width: 1200px;
             margin: 3rem auto;
@@ -43,8 +28,6 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
-        /* การ์ดแต่ละใบ */
         .card {
             background: white;
             border-radius: 10px;
@@ -56,31 +39,15 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
-
-        /* รูปภาพภายในการ์ด */
         .card img {
             width: 100%;
             height: 250px;
-            object-fit: cover; /* ทำให้รูปภาพไม่เสียสัดส่วน */
+            object-fit: cover;
             border-bottom: 3px solid #0056b3;
         }
-
-        /* ข้อความอธิบายใต้ภาพ */
-        .card-content {
-            padding: 1.5rem;
-        }
-        .card-content h3 {
-            font-size: 1.3rem;
-            color: #0056b3;
-            margin-bottom: 0.5rem;
-        }
-        .card-content p {
-            font-size: 0.95rem;
-            color: #666;
-            line-height: 1.5;
-        }
-
-        /* ส่วนท้ายของเว็บไซต์ */
+        .card-content { padding: 1.5rem; }
+        .card-content h3 { font-size: 1.3rem; color: #0056b3; margin-bottom: 0.5rem; }
+        .card-content p { font-size: 0.95rem; color: #666; line-height: 1.5; }
         footer {
             text-align: center;
             padding: 2rem;
@@ -98,40 +65,38 @@
     </header>
 
     <main class="gallery-container">
-        
         <div class="card">
-            <img src="ใส่ที่อยู่รูปภาพของคุณที่นี่.jpg" alt="ชื่อสถานที่">
+            <img src="https://picsum.photos/seed/thai1/400/300" alt="สถานที่ 1">
             <div class="card-content">
-                <h3>ชื่อสถานที่ท่องเที่ยว 1</h3>
+                <h3>วัดพระศรีรัตนศาสดาราม</h3>
                 <p>จังหวัด: กรุงเทพมหานคร</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="ใส่ที่อยู่รูปภาพของคุณที่นี่.jpg" alt="ชื่อสถานที่">
+            <img src="https://picsum.photos/seed/thai2/400/300" alt="สถานที่ 2">
             <div class="card-content">
-                <h3>ชื่อสถานที่ท่องเที่ยว 2</h3>
+                <h3>ดอยอินทนนท์</h3>
                 <p>จังหวัด: เชียงใหม่</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="ใส่ที่อยู่รูปภาพของคุณที่นี่.jpg" alt="ชื่อสถานที่">
+            <img src="https://picsum.photos/seed/thai3/400/300" alt="สถานที่ 3">
             <div class="card-content">
-                <h3>ชื่อสถานที่ท่องเที่ยว 3</h3>
+                <h3>แหลมพรหมเทพ</h3>
                 <p>จังหวัด: ภูเก็ต</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="ใส่ที่อยู่รูปภาพของคุณที่นี่.jpg" alt="ชื่อสถานที่">
+            <img src="https://picsum.photos/seed/thai4/400/300" alt="สถานที่ 4">
             <div class="card-content">
-                <h3>ชื่อสถานที่ท่องเที่ยว 4</h3>
+                <h3>เขาสก</h3>
                 <p>จังหวัด: สุราษฎร์ธานี</p>
             </div>
         </div>
-        
-        </main>
+    </main>
 
     <footer>
         <p>&copy; 2026 เว็บไซต์รวมภาพท่องเที่ยวไทย. สร้างสรรค์ด้วยความตั้งใจ.</p>
