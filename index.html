@@ -3,57 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>สถานที่ท่องเที่ยวในประเทศไทย</title>
+    <title>สถานที่ท่องเที่ยวในประเทศไทย | เที่ยวไทยไปกับเรา</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Sarabun', Tahoma, sans-serif;
+            font-family: 'Prompt', sans-serif;
             background-color: #f4f7f6;
             color: #333;
         }
+
+        /* ส่วนหัวของเว็บไซต์ (Header) */
         header {
-            background-color: #0056b3;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1920&q=80') center/cover;
             color: white;
             text-align: center;
-            padding: 3rem 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 100px 20px;
         }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
-        .gallery-container {
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* โครงสร้างส่วนจัดแสดงรูปภาพ (Gallery Grid) */
+        .container {
             max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 1rem;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 25px;
         }
+
+        /* การตกแต่งการ์ดรูปภาพ */
         .card {
             background: white;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
+
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
+
         .card img {
             width: 100%;
             height: 250px;
             object-fit: cover;
-            border-bottom: 3px solid #0056b3;
+            display: block;
+            transition: transform 0.5s ease;
         }
-        .card-content { padding: 1.5rem; }
-        .card-content h3 { font-size: 1.3rem; color: #0056b3; margin-bottom: 0.5rem; }
-        .card-content p { font-size: 0.95rem; color: #666; line-height: 1.5; }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-info h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .card-info p {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+        }
+
+        /* ส่วนท้าย (Footer) */
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: #333;
+            padding: 20px;
+            background-color: #2c3e50;
             color: white;
-            margin-top: 3rem;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -61,62 +107,32 @@
 
     <header>
         <h1>มหัศจรรย์เมืองไทย</h1>
-        <p>รวบรวมภาพสถานที่ท่องเที่ยวที่สวยงามที่สุดในประเทศไทย</p>
+        <p>บันทึกการเดินทางและสถานที่ท่องเที่ยวที่สวยงาม</p>
     </header>
 
-    <main class="gallery-container">
-        <div class="card">
-            <img src="https://picsum.photos/seed/thai1/400/300" alt="สถานที่ 1">
-            <div class="card-content">
-                <h3>วัดพระศรีรัตนศาสดาราม</h3>
-                <p>จังหวัด: กรุงเทพมหานคร</p>
+    <div class="container">
+        <div class="gallery">
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1513622470522-26c3115456f9?auto=format&fit=crop&w=800&q=80" alt="กรุงเทพมหานคร">
+                <div class="card-info">
+                    <h3>กรุงเทพมหานคร</h3>
+                    <p>วัดอรุณราชวราราม แสงสียามค่ำคืน</p>
+                </div>
             </div>
-        </div>
 
-        <div class="card">
-            <img src="https://picsum.photos/seed/thai2/400/300" alt="สถานที่ 2">
-            <div class="card-content">
-                <h3>ดอยอินทนนท์</h3>
-                <p>จังหวัด: เชียงใหม่</p>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588613437640-5e3650228d43?auto=format&fit=crop&w=800&q=80" alt="เชียงใหม่">
+                <div class="card-info">
+                    <h3>เชียงใหม่</h3>
+                    <p>ธรรมชาติและขุนเขาที่ดอยอินทนนท์</p>
+                </div>
             </div>
-        </div>
 
-        <div class="card">
-            <img src="https://picsum.photos/seed/thai3/400/300" alt="สถานที่ 3">
-            <div class="card-content">
-                <h3>แหลมพรหมเทพ</h3>
-                <p>จังหวัด: ภูเก็ต</p>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80" alt="ภูเก็ต">
+                <div class="card-info">
+                    <h3>ภูเก็ต</h3>
+                    <p>ทะเลอันดามันและหาดทรายขาว</p>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <img src="https://picsum.photos/seed/thai4/400/300" alt="สถานที่ 4">
-            <div class="card-content">
-                <h3>อุทยานแห่งชาติเขาสก</h3>
-                <p>จังหวัด: สุราษฎร์ธานี</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://picsum.photos/seed/thai5/400/300" alt="สถานที่ 5">
-            <div class="card-content">
-                <h3>อุทยานประวัติศาสตร์อยุธยา</h3>
-                <p>จังหวัด: พระนครศรีอยุธยา</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://picsum.photos/seed/thai6/400/300" alt="สถานที่ 6">
-            <div class="card-content">
-                <h3>อุทยานประวัติศาสตร์พนมรุ้ง</h3>
-                <p>จังหวัด: บุรีรัมย์</p>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 เว็บไซต์รวมภาพท่องเที่ยวไทย. สร้างสรรค์ด้วยความตั้งใจ.</p>
-    </footer>
-
-</body>
-</html>
